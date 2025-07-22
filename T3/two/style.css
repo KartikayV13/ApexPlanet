@@ -1,0 +1,170 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid blue; */
+    /* margin: 20px; */
+    background-color: rgb(0, 60, 2);
+}
+
+.container{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* border: 1px solid red; */
+}
+
+.emoji{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column ;
+    filter: drop-shadow(2px 2px 4px black);
+}
+
+.emoji h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    color: white;
+}
+
+.emoji img{
+    width: 200px;
+}
+
+.context{
+    width: 50%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: rgb(105, 17, 17);
+    padding: 20px;
+    box-shadow: 0px 4px 10px black;
+}
+
+.emoji img{
+    filter: drop-shadow(2px 4px 4px rgb(255, 255, 255));
+}
+
+.jokes{
+    border: 2px solid rgb(0, 0, 0);
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    color: white;
+    font-weight: 700;
+    border-radius: 20px;
+    filter: drop-shadow(2px 2px 4px black);
+}
+
+.shuffle_btn button{
+padding: 20px;
+margin-top: 30px;
+letter-spacing: 2px;
+background-color: rgb(255, 166, 0);
+border-radius: 10px;
+border: none;
+color: black;
+font-weight: 800;
+transition: all 0.3s ease;
+  /* box-shadow: 0px 2px 4px white; */
+  /* filter: drop-shadow(2px 2px 4px rgb(255, 255, 255)); */
+}
+
+.shuffle_btn button:hover{
+    box-shadow: 0px 5px 7px white;
+    scale: 1.03;
+}
+
+/* Small Devices (Phones) */
+@media (max-width: 600px) {
+  .emoji h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .emoji img {
+    width: 120px;
+  }
+
+  .context {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .jokes {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .shuffle_btn button {
+    padding: 15px;
+    font-size: 14px;
+  }
+}
+
+/* Medium Devices (Tablets) */
+@media (min-width: 601px) and (max-width: 992px) {
+  .emoji h1 {
+    font-size: 34px;
+  }
+
+  .emoji img {
+    width: 160px;
+  }
+
+  .context {
+    width: 70%;
+    padding: 18px;
+  }
+
+  .jokes {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .shuffle_btn button {
+    padding: 18px;
+    font-size: 16px;
+  }
+}
+
+/* Large Devices (Desktops and above) */
+@media (min-width: 993px) {
+  .emoji h1 {
+    font-size: 40px;
+  }
+
+  .emoji img {
+    width: 200px;
+  }
+
+  .context {
+    width: 50%;
+  }
+
+  .jokes {
+    font-size: 18px;
+  }
+
+  .shuffle_btn button {
+    font-size: 18px;
+  }
+}
+
