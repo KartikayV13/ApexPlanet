@@ -107,3 +107,66 @@ body {
   color: white;
   text-shadow: 0 2px 4px black;
 }
+
+
+/* ---------- Tablet Devices (768px and down) ---------- */
+@media (max-width: 768px) {
+  .image_slider {
+    height: auto;
+    padding-top: 10px;
+    gap: 10px;
+  }
+
+  .corousel {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .list img {
+    width: 220px;
+    padding-right: 8px;
+  }
+
+  .slider-btn button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .slider-btn button span {
+    font-size: 30px;
+  }
+}
+
+/* ---------- Mobile Devices (480px and down) ---------- */
+@media (max-width: 480px) {
+  .container {
+    padding: 5px;
+  }
+
+  .image_slider {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .corousel {
+    padding: 15px 0;
+  }
+
+  .list img {
+    width: 180px;
+    padding-right: 6px;
+  }
+
+  .slider-btn {
+    gap: 10px;
+  }
+
+  .slider-btn button {
+    width: 35px;
+    height: 35px;
+  }
+
+  .slider-btn button span {
+    font-size: 24px;
+  }
+}
