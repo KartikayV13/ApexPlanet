@@ -7,7 +7,6 @@ function addTask () {
     const li = document.createElement("li")
     li.textContent = taskText;
 
-
     const dltBtn = document.createElement("button")
     dltBtn.textContent = "Delete";
     dltBtn.classList.add("dlt-btn");
@@ -18,3 +17,5 @@ function addTask () {
 
     inputText.value="";
 }
+
+

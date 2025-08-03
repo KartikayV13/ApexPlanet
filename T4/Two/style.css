@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* width: 100%; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(0, 21, 97, 0.542);
+}
+
+.heading {
+  margin: 20px 0 0 0;
+  font-size: 30px;
+  font-family: cursive;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  margin-top: 50px;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 20px;
+  width: 500px;
+  box-shadow: 1px 3px 7px black, -1px -1px 5px white;
+}
+
+.add {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 90%;
+  /* border: 2px solid red; */
+}
+
+.add input {
+  width: 300px;
+  height: 30px;
+  background: transparent;
+  color: rgb(0, 0, 0);
+  padding: 5px 10px 5px 10px;
+  font-weight: 600;
+  font-size: 15px;
+  font-family: cursive;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(0, 110, 255, 0.255);
+  box-shadow: inset 2px 4px 10px black, inset 0px 0px 10px white;
+}
+
+input::placeholder {
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  font-family: cursive;
+}
+
+.add button {
+  background: transparent;
+  outline: none;
+  border: 2px solid rgb(0, 110, 255);
+  background-color: rgba(0, 110, 255, 0.355);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  box-shadow: 1px 3px 7px black, -1px -1px 5px white;
+}
+
+.add button:hover {
+  background-color: rgba(0, 110, 255, 0.255);
+  box-shadow: none;
+}
+
+.list {
+  width: 100%;
+}
+
+#taskList {
+  gap: 10px;
+  line-gap-override: 20px;
+}
+
+#taskList li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: cursive;
+  border-bottom: 1px solid black;
+}
+
+#taskList li:hover {
+  background-color: rgba(0, 110, 255, 0.255);
+  border-radius: 10px;
+  box-shadow: 1px 3px 7px black, -1px -1px 5px white;
+  font-size: 20px;
+}
+
+.dlt-btn{
+    padding: 7px 10px 7px 10px;
+    border-radius: 10px;
+    border: 2px solid red;
+    background-color: rgba(255, 0, 0, 0.436);
+    color: white;
+    font-weight: 700;
+}
+
+.dlt-btn:hover{
+ background-color: rgba(255, 0, 0, 0.296);
+}
