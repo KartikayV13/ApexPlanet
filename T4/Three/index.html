@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtering-Product</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+
+    <main class="product_filter">
+        <section class="shop_filter">
+            <div class="heading">
+                <h1>Shop Filtering</h1>
+            </div>
+
+
+            <div class="full_container">
+
+                <div class="container">
+                    <div class="category_section">
+                        <div class="list_filter ">
+                            <h1>Category</h1>
+                            <div class="category_list"></div>
+                        </div>
+
+                        <!-- PRICE---->
+                        <div class="price_filter">
+                            <h2>Price (₹)</h2>
+                            <label>Min: <input type="number" id="minPrice" value="0" /></label><br />
+                            <label>Max: <input type="number" id="maxPrice" value="10000" /></label>
+                        </div>
+
+                        <!-- RATING------------->
+                        <div class="rating_filter">
+                            <h2>Min Rating</h2>
+                            <select id="minRating">
+                                <option value="0">All</option>
+                                <option value="1">1+</option>
+                                <option value="2">2+</option>
+                                <option value="3">3+</option>
+                                <option value="4">4+</option>
+                            </select>
+                        </div>
+
+                        <button onclick="applyAllFilters()">Apply Filters</button>
+
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product-box">
+                        <div class="product_img">
+                            <img src="./assets/bag.png" alt="">
+                        </div>
+                        <div class="context">
+                            <h5> <span class="price">₹4000</span>
+                                <span class="divider"> | </span>
+                                <span class="material-symbols-outlined star">star</span>
+                                <span class="rating">4.5</span>
+                            </h5>
+                            <h1>Leather Bag</h1>
+                            <p>Leather Bag for carrying items for Womens</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
