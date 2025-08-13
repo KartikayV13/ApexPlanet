@@ -10,7 +10,7 @@ const products = [
   {
     id: 1,
     name: "Lays All Dressed",
-    category: "chips & kurkure",
+    category: "chips",
     price: "₹25.00",
     rating: "4.5",
     image: "./assets/chips/allDressed.png",
@@ -19,7 +19,7 @@ const products = [
   {
     id: 2,
     name: "Lays Sour Cream",
-    category: "chips & kurkure",
+    category: "chips",
     price: "₹20.00",
     rating: "4.5",
     image: "./assets/chips/sour-cream.png",
@@ -28,7 +28,7 @@ const products = [
   {
     id: 3,
     name: "Lays Classic Salt",
-    category: "chips & kurkure",
+    category: "chips",
     price: "₹10.00",
     rating: "4.5",
     image: "./assets/chips/laysclassicsalt.png",
@@ -37,7 +37,7 @@ const products = [
   {
     id: 4,
     name: "Lays BBQ",
-    category: "chips & kurkure",
+    category: "chips",
     price: "₹25.00",
     rating: "4.5",
     image: "./assets/chips/lays1.png",
@@ -46,7 +46,7 @@ const products = [
   {
     id: 5,
     name: "Lays Cream & Oninon",
-    category: "chips & kurkure",
+    category: "chips",
     price: "₹10.00",
     rating: "4.5",
     image: "./assets/chips/layscreamnonion.png",
@@ -55,7 +55,7 @@ const products = [
   {
     id: 6,
     name: "Lays Sour & Onion Cream",
-    category: "chips & kurkure",
+    category: "chips",
     price: "₹20.00",
     rating: "4.5",
     image: "./assets/chips/sour-cream.png",
@@ -64,7 +64,7 @@ const products = [
   {
     id: 7,
     name: "Kurkure PuffCorn",
-    category: "chips & kurkure",
+    category: "chips",
     price: "₹10.00",
     rating: "4.5",
     image: "./assets/chips/puffcorn.png",
@@ -73,7 +73,7 @@ const products = [
   {
     id: 8,
     name: "Kurkure Masala Munch",
-    category: "chips & kurkure",
+    category: "chips",
     price: "₹10.00",
     rating: "4.5",
     image: "./assets/chips/kurkure1.png",
@@ -82,7 +82,7 @@ const products = [
   {
     id: 9,
     name: "Uncle Chipps",
-    category: "chips & kurkure",
+    category: "chips",
     price: "₹20.00",
     rating: "4.5",
     image: "./assets/chips/unclechips1.png",
@@ -91,7 +91,7 @@ const products = [
   {
     id: 10,
     name: "Bingo",
-    category: "chips & kurkure",
+    category: "chips",
     price: "₹10.00",
     rating: "4.5",
     image: "./assets/chips/bingo.png",
@@ -100,7 +100,7 @@ const products = [
   {
     id: 11,
     name: "Lays Flaming Hot",
-    category: "chips & kurkure",
+    category: "chips",
     price: "₹20.00",
     rating: "4.5",
     image: "./assets/chips/LaysFlaminHot.png",
@@ -556,11 +556,12 @@ const products = [
     price: "₹30.00",
     rating: "4.5",
     image: "./assets/vegitables/toomato.png",
-  }, 
+  },
 ];
 
-
 const productContainer = document.querySelector(".product_item");
+
+// ✅ Render products----------------------------->>>>>>>
 
 function renderProducts(productList) {
   productContainer.innerHTML = "";
@@ -579,11 +580,23 @@ function renderProducts(productList) {
         <img src="${product.image}" alt="${product.name}" 
              onerror="this.src='https://via.placeholder.com/150'">
       </div>
+
       <div class="product-buy">
-        <h4 class="name">${product.name}</h4>
-        <p class="quantity">${product.quantity || ""}</p>
-        <h5 class="price">Price: ${product.price} | ⭐ ${product.rating}</h5>
+
+       <h5 class="price">Price: ${product.price} | ★ ${product.rating} </h5>
+
+        <h4 class="name">${product.name}  | ${product.quantity || ""} </h4>
+
         <p class="discription">${product.description || ""}</p>
+        
+        <div class="cart-button">
+      <button class="cart_icon" onClick="showMsg(this)">
+  <i class="bi bi-cart"></i>
+</button>
+        <p class="cart-popup">Added To Cart</p>
+        </div>
+      
+       
       </div>
     `;
 
@@ -591,5 +604,44 @@ function renderProducts(productList) {
   });
 }
 
-// ✅ Call this once to show all items
+// ✅ Call this once to show all items------------------->>>>>
 renderProducts(products);
+
+//SHOW ADDTO CART MESSAGE--------------------------------->>>>>
+
+function showMsg(button) {
+  // Find the popup inside the same cart-button container
+  const popUp = button.parentElement.querySelector(".cart-popup");
+
+  popUp.classList.add("show");
+
+  setTimeout(() => {
+    popUp.classList.remove("show");
+  }, 1000);
+}
+
+//filteration process--------------------->>>>>>
+
+const categoryCheckboxes = document.querySelectorAll(".categoryCheckbox");
+
+function filterproduct() {
+  const selectedCategory = Array.from(categoryCheckboxes)
+    .filter((checkbox) => checkbox.checked)
+    .map((checkbox) => checkbox.value);
+
+  if (selectedCategory.length === 0) {
+    renderProducts(products);
+    return;
+  }
+
+  const filterProducts = products.filter((product) => {
+    return selectedCategory.includes(product.category);
+  });
+  
+  renderProducts(filterProducts);
+}
+
+
+categoryCheckboxes.forEach((checkbox) => {
+  checkbox.addEventListener("change", filterproduct)
+});
