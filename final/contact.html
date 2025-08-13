@@ -2,55 +2,118 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Ordering</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Ordering</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
-    <main>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <img class="navbar-brand" src="./assets/logo.png" alt="">
+  <main>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <img class="navbar-brand" src="./assets/logo.png" alt="">
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="./index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./organic.html">Organic</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./store.html">Store</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./contact.html">Contact</a>
-        </li>
-      </ul>
-    </div>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Organic</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./store.html">Store</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
 
-  </div>
-</nav>
+      </div>
+    </nav>
 
-
-  <h1>CONTACT</h1>
-
-
+    <section class="contact">
 
 
+      <div class="heading">
+        <h1>Contact Us</h1>
+      </div>
 
+      <div class="service_boxes">
+        <div class="box-container">
+
+          <div class="block animate__animated animate__backInLeft">
+            <span class="block-heading">Customer Care</span>
+            <span class="duration">24/7</span>
+            <span class="icon"><i class="bi bi-telephone-fill"></i></span>
+          </div>
+
+          <div class="block animate__animated animate__backInLeft">
+            <span class="block-heading"> Email </span>
+
+            <span class="duration">24/7</span>
+
+            <span class="icon"><i class="bi bi-envelope-at"></i></span>
+          </div>
+
+          <div class="block animate__animated animate__backInLeft">
+            <span class="block-heading">Chat Support</span>
+
+            <span class="duration">24/7</span>
+
+            <span class="icon"><i class="bi bi-chat-left-fill"></i></span>
+          </div>
+
+          <div class="block animate__animated animate__backInLeft">
+            <span class="block-heading">Social Media</span>
+        
+            <span class="duration">24/7</span>
+            
+            <span class="icon"><i class="bi bi-linkedin"></i></span>
+          </div>
+
+        </div>
+      </div>
+
+
+      <form>
+
+        <h1>Anything For Us</h1>
+
+      <div class="details-input">
+        <label for="name">Name:</label>
+        <input class="input" type="text" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+
+      <div class="details-input">
+        <label for="email">Email:</label>
+        <input class="input" type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="details-input">
+        <label for="message">Message:</label>
+        <textarea class="input" id="message" name="message" rows="4" placeholder="Type your message here..." required></textarea>
+      </div>  
+        
+        <button type="submit">Submit</button>
+
+      </form>
+
+    </section>
 
     <!-- Footer------------------------------------------- -->
-     <footer class="footer">
+    <footer class="footer">
       <div class="footer-container">
 
         <div class="heading_email">
@@ -94,25 +157,25 @@
             </div>
 
             <div class="service-box">
-               <h5>SOCIAL MEDIA</h5>
-               <div class="icons">
-                 <div class="icon"><i class="bi bi-facebook"></i></div>
-                 <div class="icon"><i class="bi bi-instagram"></i></div>
-                 <div class="icon"><i class="bi bi-twitter-x"></i></div>
-                 <div class="icon"><i class="bi bi-google"></i></div>
-                </div>
+              <h5>SOCIAL MEDIA</h5>
+              <div class="icons">
+                <div class="icon"><i class="bi bi-facebook"></i></div>
+                <div class="icon"><i class="bi bi-instagram"></i></div>
+                <div class="icon"><i class="bi bi-twitter-x"></i></div>
+                <div class="icon"><i class="bi bi-google"></i></div>
+              </div>
             </div>
 
           </div>
         </div>
       </div>
-     </footer>
-    </main>
+    </footer>
+  </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-        crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
